@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20160827124403) do
     t.string   "name",        null: false
     t.string   "email"
     t.string   "blood_group", null: false
-    t.integer  "status_cd",   null: false
+    t.integer  "status",      null: false
     t.boolean  "emergency",   null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -70,12 +70,12 @@ ActiveRecord::Schema.define(version: 20160827124403) do
   end
 
   create_table "phone_numbers", force: :cascade do |t|
-    t.string   "owner_type",    null: false
-    t.integer  "owner_id",      null: false
-    t.integer  "phone_type_cd", null: false
-    t.string   "phone_number",  null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "owner_type",   null: false
+    t.integer  "owner_id",     null: false
+    t.integer  "phone_type",   null: false
+    t.string   "phone_number", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["owner_type", "owner_id"], name: "index_phone_numbers_on_owner_type_and_owner_id", using: :btree
   end
 

@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   enum gender: [:male, :female]
   enum blood_group: [:b,:'b+', :o, :'o+', :'o-', :'ab+']
+  has_many :documents, as: :owner
 end
