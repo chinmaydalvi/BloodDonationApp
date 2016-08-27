@@ -1,0 +1,2 @@
+class BloodDonationRecord < ApplicationRecord
+end
